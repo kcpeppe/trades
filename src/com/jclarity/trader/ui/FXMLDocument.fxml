@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jclarity.trader.ui.FXMLDocumentController">
+    <children>
+        <Button fx:id="shutdown" layoutX="126.0" layoutY="160.0" onAction="#handleShutdownButtonAction" text="Shutdown" />
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Button fx:id="execute" layoutX="232.0" layoutY="160.0" mnemonicParsing="false" onAction="#handleExecuteButtonAction" text="Execute" />
+      <TextField fx:id="port" layoutX="98.0" layoutY="14.0" text="4040" />
+      <TextField fx:id="numTrades" layoutX="98.0" layoutY="49.0" text="1000000" />
+      <Label layoutX="26.0" layoutY="19.0" text="Port" />
+      <Label layoutX="22.0" layoutY="54.0" text="#Trades" />
+      <RadioButton fx:id="serial" layoutX="98.0" layoutY="91.0" mnemonicParsing="false" selected="true" text="Serial">
+         <toggleGroup>
+            <ToggleGroup fx:id="tradeType" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="98.0" layoutY="119.0" mnemonicParsing="false" text="Binary" toggleGroup="$tradeType" />
+    </children>
+</AnchorPane>
